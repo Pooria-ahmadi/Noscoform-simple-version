@@ -11,7 +11,7 @@
 
 <body>
     <div class="background-container">
-        <p class="text-content is-size-3 has-text-white">
+        <p class="text-content is-size-3 has-text-white  is-uppercase">
             Your <br>
             pharmaceutical <br>
             research <br>
@@ -149,3 +149,17 @@
 </body>
 
 </html>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const navbarBurger = document.querySelector('.navbar-burger');
+        const navbarMenu = document.querySelector('#navbarBasicExample');
+        if (navbarBurger) {
+            navbarBurger.addEventListener('click', () => {
+                navbarBurger.classList.toggle('is-active');
+                if (navbarMenu) {
+                    navbarMenu.classList.toggle('is-active');
+                }
+            });
+        }
+    });
+</script>

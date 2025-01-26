@@ -131,6 +131,8 @@
     height: 600px;
 }
 
+
+
 .bg-E7EBFF {
     background-color: #E7EBFF;
     width: 50%;
@@ -156,6 +158,16 @@
 }
 
 @media (max-width: 768px) {
+    #navbarBasicExample {
+        background: #000000eb;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    #navbarBasic{
+        background: #ffffffeb;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
     .pr-45px {
         padding-right: 45px;
     }

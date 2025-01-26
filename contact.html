@@ -13,13 +13,13 @@
     <div class="w-1000px mx-auto">
         <nav class="navbar mx-auto w-1000px ">
             <div class="navbar-brand ">
-                <a role="button" class="navbar-burger has-text-white" aria-label="menu" aria-expanded="false">
+                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
                     <span aria-hidden="true"></span>
                     <span aria-hidden="true"></span>
                     <span aria-hidden="true"></span>
                 </a>
             </div>
-            <div id="navbarBasicExample" class="navbar-menu is-align-items-center">
+            <div id="navbarBasic" class="navbar-menu is-align-items-center">
                 <div class="navbar-start is-align-items-center">
                     <img src="image/logo.png" alt="">
                 </div>
@@ -161,3 +161,17 @@
 </body>
 
 </html>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const navbarBurger = document.querySelector('.navbar-burger');
+        const navbarMenu = document.querySelector('#navbarBasic');
+        if (navbarBurger) {
+            navbarBurger.addEventListener('click', () => {
+                navbarBurger.classList.toggle('is-active');
+                if (navbarMenu) {
+                    navbarMenu.classList.toggle('is-active');
+                }
+            });
+        }
+    });
+</script>

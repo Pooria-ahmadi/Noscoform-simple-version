@@ -35,6 +35,9 @@
 .w-84px {
     width: 84px;
 }
+.line-height-1px{
+    line-height: 1.8;
+}
 
 .bg-4A7160-br-10 {
     background-color: #4A7160;
@@ -199,5 +202,11 @@
 @media (min-width: 768px) {
     .mr-15px {
         margin-right: 168px;
+    }
+    .margin-right-15px{
+        margin-right: 15px;
+    }
+    .mt-15px{
+        margin-top: 10px;
     }
 }

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>index</title>
+    <title>Pipeline</title>
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
 </head>
@@ -72,12 +72,12 @@
                 </div>
                 <div class="is-flex is-justify-content-space-between px-4 py-4">
 
-                    <p class="has-text-grey-dark has-text-weight-bold">
+                    <p class="has-text-grey-dark has-text-weight-bold w-138px">
                         IMMUNOLOGY &
 INFLAMMATION
 
                     </p>
-                    <p class="color-0808b5 w-53px">
+                    <p class="color-0808b5 w-56px">
                         Read
                         <img src="../image/blue down.png" alt="" class="">
 
@@ -128,39 +128,14 @@ INFLAMMATION
             </p>
         </div>
         <div class="columns mx-0 has-text-centered">
-            <div class="column">
-                <img src="../image/Frame 19.png" alt="">
+            <div class="column" id="column1">
+                <img id="image1" src="../image/Frame 28.png" alt="Frame 28">
             </div>
-            <div class="column">
-                <img src="../image/Frame 29.png" alt="">
-            </div>
-
-        </div>
-        <div class="columns mx-0 is-vcentered ">
-            <div class="column ">
-                <img src="../image/image 33.png" alt="" class="pr-45px">
-            </div>
-            <div class="column pl-6 mb-50px">
-                <p class="is-size-5 has-text-black">
-                    Vaccines
-                    <hr class="has-background-black mt-2 w-84px">
-                </p>
-                <ul class="circle">
-                    <li>
-                        MMR (mumps, rubella, measles) vaccine;
-                        <img src="../image/right.png" alt="">
-                    </li>
-                    <li class="my-4">
-                        Meningococcal (Polysaccharide) vaccines;
-                        <img src="../image/right.png" alt="">
-                    </li>
-                    <li>
-                        HPV (Human PapillomaVirus) vaccine. 
-                        <img src="../image/right.png" alt="">
-                    </li>
-                </ul>
+            <div class="column" id="column2">
+                <img id="image2" src="../image/Frame 29.png" alt="Frame 28">
             </div>
         </div>
+        <div id="content-area" class="mt-5"></div>
     </div>
     <div>
         <div class=" bg-0A142F">
@@ -205,5 +180,94 @@ INFLAMMATION
                 }
             });
         }
+    });
+    const column1 = document.getElementById('column1');
+    const column2 = document.getElementById('column2');
+    const image1 = document.getElementById('image1');
+    const image2 = document.getElementById('image2');
+    const contentArea = document.getElementById('content-area');
+    const activeImage1 = "../image/Frame 19.png";
+    const inactiveImage1 = "../image/Frame 28.png";
+    const activeImage2 = "../image/Frame 21.png";
+    const inactiveImage2 = "../image/Frame 29.png";
+    const content1 = `
+        <div class="columns mx-0 is-vcentered">
+            <div class="column">
+                <img src="../image/image 33.png" alt="" class="pr-45px">
+            </div>
+            <div class="column pl-6 mb-50px">
+                <p class="is-size-5 has-text-black">
+                    Vaccines
+                    <hr class="has-background-black mt-2 w-84px">
+                </p>
+                <ul class="circle">
+                    <li>
+                        MMR (mumps, rubella, measles) vaccine;
+                        <img src="../image/right.png" alt="">
+                    </li>
+                    <li class="my-4">
+                        Meningococcal (Polysaccharide) vaccines;
+                        <img src="../image/right.png" alt="">
+                    </li>
+                    <li>
+                        HPV (Human PapillomaVirus) vaccine. 
+                        <img src="../image/right.png" alt="">
+                    </li>
+                </ul>
+            </div>
+        </div>
+    `;
+    const content2 =`
+        <div class="columns mx-0 is-vcentered">
+            <div class="column">
+                <img src="../image/image 34.png" alt="" class="pr-45px">
+            </div>
+            <div class="column pl-6 mb-50px">
+                <p class="is-size-5 has-text-black">
+                    MÉDICAMENTS
+                    <hr class="has-background-black mt-2 w-137px">
+                </p>
+                <ul class="circle">
+                    <li>
+                        BCG recombinant contre le cancer de la vessie;
+                        <img src="../image/right.png" alt="">
+                    </li>
+                    <li class="my-4">
+                       BCG oral (Maladie Intestinale Anti-inflammatoire);
+                        <img src="../image/right.png" alt="">
+                    </li>
+                    <li>
+                       BCG oral (Athérosclérose);
+                        <img src="../image/right.png" alt="">
+                    </li>
+                    <li class="my-4">
+                       BCG Dispersé;
+                        <img src="../image/right.png" alt="">
+                    </li>
+                    <li>
+                       Insulin (Glargine, Aspart);
+                        <img src="../image/right.png" alt="">
+                    </li>
+                    <li class="mt-4">
+                       Champignons médicinaux.
+                        <img src="../image/right.png" alt="">
+                    </li>
+                </ul>
+            </div>
+        </div>
+    `;
+    const activateColumn1 = () => {
+        contentArea.innerHTML = content1;
+        image1.src = activeImage1;
+        image2.src = inactiveImage2;
+    };
+    column1.addEventListener('click', activateColumn1);
+    column2.addEventListener('click', () => {
+        contentArea.innerHTML = content2;
+        image2.src = activeImage2;
+        image1.src = inactiveImage1;
+    });
+    document.addEventListener('DOMContentLoaded', () => {
+        activateColumn1();
     });
 </script>

@@ -23,9 +23,11 @@
     border-radius: 15px;
     box-shadow: 0 0px 9px -4px;
 }
-
-.w-53px {
-    width: 53px;
+.w-138px{
+    width: 138px;
+}
+.w-56px {
+    width: 56px;
 }
 
 .circle {
@@ -134,7 +136,9 @@
     height: 600px;
 }
 
-
+.w-100px{
+    width: 100px;
+}
 
 .bg-E7EBFF {
     background-color: #E7EBFF;
@@ -143,7 +147,9 @@
     border-radius: 15px;
     height: 600px;
 }
-
+.w-137px{
+    width: 137px;
+}
 
 .mx-10px {
     margin-right: 10px;

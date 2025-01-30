@@ -59,71 +59,111 @@
         <div class="columns mx-0 mt-5">
             <div class="column">
                 <P class="has-text-justified pb-3">
-                    Vaccines and medicines are designed by experienced researchers in the field of biology and pharmacology. Our R&D department is made up of engineers responsible for directly developing new products and scientists and industrialists responsible for applied research in scientific or technological fields, which can facilitate the development of future products and treatments to combat various pathologies.
+                    Vaccines and medicines are designed by experienced researchers in the field of biology and
+                    pharmacology. Our R&D department is made up of engineers responsible for directly developing new
+                    products and scientists and industrialists responsible for applied research in scientific or
+                    technological fields, which can facilitate the development of future products and treatments to
+                    combat various pathologies.
 
                 </P>
             </div>
         </div>
-
-        <div class="columns mx-0 my-6 pb-5">
-            <div class="column bg-E9ECFF mx-10px">
+    </div>
+    <iframe id="mobile-frame" src="mobile.html"></iframe>
+        <div class="custom-row" id="desktop-content">
+            <div class="custom-column bg-E9ECFF hoverable-column Immunologie">
                 <div class="has-text-centered">
                     <img src="../image/image 16.png" alt="">
                 </div>
-                <div class="is-flex is-justify-content-space-between px-4 py-4">
-
-                    <p class="has-text-grey-dark has-text-weight-bold w-138px">
-                        IMMUNOLOGY &
-INFLAMMATION
-
+                <div class="is-flex is-justify-content-space-between pt-2">
+                    <p class="has-text-grey-dark has-text-weight-bold  has-text-left w-138px">
+                        Immunologie et Inflammation
                     </p>
                     <p class="color-0808b5 w-56px">
                         Read
-                        <img src="../image/blue down.png" alt="" class="">
+                        <img src="../image/blue down.png" alt="">
+                    </p>
+                </div>
+                <div class="hidden-text">
+                    <p class="has-text-black mt-4 has-text-left">
+                        The different types of cellular subsets, soluble factors, membrane molecules and cellular
+                        functionality are aspects that we are beginning to understand, as well as their role in health,
+                        aging and disease. Pharmapole International wishes to introduce new therapeutic options for
+                        chronic inflammatory diseases that are difficult to treat such as asthma or inflammatory bowel
+                        disease (IBD).
 
                     </p>
                 </div>
             </div>
-            <div class="column bg-E5F9F0 mx-10px mb-25px">
+
+            <div class="custom-column bg-E5F9F0 hoverable-column vaccines">
                 <div class="has-text-centered">
                     <img src="../image/image 15.png" alt="">
                 </div>
-                <div class="is-flex is-justify-content-space-between px-4 py-4">
-
+                <div class="is-flex is-justify-content-space-between  py-4">
                     <p class="has-text-grey-dark has-text-weight-bold">
                         VACCINES
                     </p>
                     <p class="has-text-grey">
                         Read
-                        <img src="../image/grey down.png" alt="" class="">
-
+                        <img src="../image/grey down.png" alt="">
                     </p>
                 </div>
+                <div class="hidden-text">
+                    <p class="has-text-black mt-4 has-text-left">
+                        Vaccination is beneficial from an individual point of view. Vaccination is the process of
+                        protecting a person from disease by stimulating their immune system. Preventive vaccines prevent
+                        infectious diseases. Therapeutic vaccines help patients fight an existing disease, such as
+                        cancer.
+
+                    </p>
+                    <p class="has-text-black has-text-left">
+                        Vaccine research objectives:
+                    </p>
+                    <ul class="has-text-black has-text-left">
+                        <li>
+                            produce new vaccines;;
+                        </li>
+                        <li>improve the comfort, tolerance and effectiveness of existing vaccines.
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <div class="column bg-FFE2E4 mx-10px">
+
+            <div class="custom-column bg-FFE2E4 hoverable-column oncology">
                 <div class="has-text-centered">
                     <img src="../image/image 17.png" alt="">
                 </div>
-                <div class="is-flex is-justify-content-space-between px-4 py-4">
-
+                <div class="is-flex is-justify-content-space-between  py-4">
                     <p class="has-text-grey-dark has-text-weight-bold">
                         ONCOLOGY
                     </p>
                     <p class="has-text-danger-dark">
                         Read
-                        <img src="../image/red down.png" alt="" class="">
-
+                        <img src="../image/red down.png" alt="">
+                    </p>
+                </div>
+                <div class="hidden-text">
+                    <p class="has-text-black mt-4 has-text-left">
+                        Cancer is the second leading cause of death worldwide behind cardiovascular disease. In order to
+                        reduce the incidence of cancers, prevention of carcinogenic infections and efforts to improve
+                        lifestyle are essential. To advance cancer therapy, the Pharmapole International company uses
+                        technology platforms to produce medicines to combat cancer in the body.
                     </p>
                 </div>
             </div>
         </div>
+        <div class="w-1000px mx-auto">
         <div class="bg-4A7160-br-10 mb-6">
             <p class="has-text-centered has-text-white has-text-weight-bold">
-                Pharmapole International actively participates in the battle against a number of pathologies which currently plague our society in order to advance research on the subject and find conclusive treatment solutions.
+                Pharmapole International actively participates in the battle against a number of pathologies which
+                currently plague our society in order to advance research on the subject and find conclusive treatment
+                solutions.
 
             </p>
             <p class="has-text-centered has-text-white is-size-7 mt-5">
-                To find out more about the different areas we work on or to talk to our experts, do not hesitate to contact us now.
+                To find out more about the different areas we work on or to talk to our experts, do not hesitate to
+                contact us now.
 
             </p>
         </div>
@@ -217,7 +257,7 @@ INFLAMMATION
             </div>
         </div>
     `;
-    const content2 =`
+    const content2 = `
         <div class="columns mx-0 is-vcentered">
             <div class="column">
                 <img src="../image/image 34.png" alt="" class="pr-45px">
@@ -271,3 +311,75 @@ INFLAMMATION
         activateColumn1();
     });
 </script>
+<style>
+    .custom-row {
+        text-align: center;
+        margin: 20px 0;
+    }
+
+    .custom-column {
+        display: inline-block;
+        width: 22%;
+        vertical-align: top;
+        padding: 20px;
+        border-radius: 8px;
+        margin: 10px;
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .hoverable-column {
+        position: relative;
+        border: 5px solid transparent;
+    }
+
+    .Immunologie:hover {
+        border-color: #2C41A8;
+    }
+
+    .vaccines:hover {
+        border-color: #485952;
+    }
+
+    .oncology:hover {
+        border-color: #B54141;
+    }
+
+    .hidden-text {
+        max-height: 0;
+        overflow: hidden;
+        transition: all 0.3s ease;
+    }
+
+    .hoverable-column:hover {
+        width: 30%;
+
+        z-index: 10;
+        overflow: visible;
+        transition: width 0.3s ease, transform 0.3s ease;
+    }
+
+    .hoverable-column:hover .hidden-text {
+        display: block;
+        opacity: 1;
+        max-height: 250px;
+    }
+    #desktop-content {
+            display: block;
+        } 
+        #mobile-frame {
+            display: none;
+            width: 100%;
+            height: 100vh;
+            border: none;
+        }
+        @media screen and (max-width: 768px) {
+            #desktop-content {
+                display: none;
+            }
+            #mobile-frame {
+                display: block;
+            }
+        }
+</style>

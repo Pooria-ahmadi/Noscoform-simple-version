@@ -139,7 +139,9 @@
 .w-100px{
     width: 100px;
 }
-
+.overflow-y-hidden{
+    overflow-y: hidden;
+}
 .bg-E7EBFF {
     background-color: #E7EBFF;
     width: 50%;

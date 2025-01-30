@@ -166,39 +166,14 @@
             </p>
         </div>
         <div class="columns mx-0 has-text-centered">
-            <div class="column">
-                <img src="image/Frame 19.png" alt="">
+            <div class="column" id="column1">
+                <img id="image1" src="image/Frame 28.png" alt="Frame 28">
             </div>
-            <div class="column">
-                <img src="image/Frame 29.png" alt="">
-            </div>
-
-        </div>
-        <div class="columns mx-0 is-vcentered ">
-            <div class="column ">
-                <img src="image/image 33.png" alt="" class="pr-45px">
-            </div>
-            <div class="column pl-6 mb-50px">
-                <p class="is-size-5 has-text-black">
-                    VACCINS
-                    <hr class="has-background-black mt-2 w-84px">
-                </p>
-                <ul class="circle">
-                    <li>
-                        Vaccin MMR (Oreillons, Rubéole, Rougeole);
-                        <img src="image/right.png" alt="">
-                    </li>
-                    <li class="my-4">
-                        Vaccins Méningocoque (Polysaccharide);
-                        <img src="image/right.png" alt="">
-                    </li>
-                    <li>
-                        Vaccin HPV (Human PapillomaVirus).
-                        <img src="image/right.png" alt="">
-                    </li>
-                </ul>
+            <div class="column" id="column2">
+                <img id="image2" src="image/Frame 29.png" alt="Frame 28">
             </div>
         </div>
+        <div id="content-area" class="mt-5"></div>
     </div>
     <div>
         <div class=" bg-0A142F">
@@ -243,6 +218,95 @@
                 }
             });
         }
+    });
+    const column1 = document.getElementById('column1');
+    const column2 = document.getElementById('column2');
+    const image1 = document.getElementById('image1');
+    const image2 = document.getElementById('image2');
+    const contentArea = document.getElementById('content-area');
+    const activeImage1 = "image/Frame 19.png";
+    const inactiveImage1 = "image/Frame 28.png";
+    const activeImage2 = "image/Frame 21.png";
+    const inactiveImage2 = "image/Frame 29.png";
+    const content1 = `
+        <div class="columns mx-0 is-vcentered">
+            <div class="column">
+                <img src="image/image 33.png" alt="" class="pr-45px">
+            </div>
+            <div class="column pl-6 mb-50px">
+                <p class="is-size-5 has-text-black">
+                    Vaccines
+                    <hr class="has-background-black mt-2 w-84px">
+                </p>
+                <ul class="circle">
+                    <li>
+                        Vaccin MMR (Oreillons, Rubéole, Rougeole);
+                        <img src="image/right.png" alt="">
+                    </li>
+                    <li class="my-4">
+                        Vaccins Méningocoque (Polysaccharide);
+                        <img src="image/right.png" alt="">
+                    </li>
+                    <li>
+                        Vaccin HPV (Human PapillomaVirus).
+                        <img src="image/right.png" alt="">
+                    </li>
+                </ul>
+            </div>
+        </div>
+    `;
+    const content2 = `
+        <div class="columns mx-0 is-vcentered">
+            <div class="column">
+                <img src="image/image 34.png" alt="" class="pr-45px">
+            </div>
+            <div class="column pl-6 mb-50px">
+                <p class="is-size-5 has-text-black">
+                    MÉDICAMENTS
+                    <hr class="has-background-black mt-2 w-137px">
+                </p>
+                <ul class="circle">
+                    <li>
+                       BCG recombinant contre le cancer de la vessie;
+                        <img src="image/right.png" alt="">
+                    </li>
+                    <li class="my-4">
+                       BCG oral (Maladie Intestinale Anti-inflammatoire);
+                        <img src="image/right.png" alt="">
+                    </li>
+                    <li>
+                       BCG oral (Athérosclérose);
+                        <img src="image/right.png" alt="">
+                    </li>
+                    <li class="my-4">
+                       BCG Dispersé;
+                        <img src="image/right.png" alt="">
+                    </li>
+                    <li>
+                       Insulin (Glargine, Aspart);
+                        <img src="image/right.png" alt="">
+                    </li>
+                    <li class="mt-4">
+                       Champignons médicinaux.
+                        <img src="image/right.png" alt="">
+                    </li>
+                </ul>
+            </div>
+        </div>
+    `;
+    const activateColumn1 = () => {
+        contentArea.innerHTML = content1;
+        image1.src = activeImage1;
+        image2.src = inactiveImage2;
+    };
+    column1.addEventListener('click', activateColumn1);
+    column2.addEventListener('click', () => {
+        contentArea.innerHTML = content2;
+        image2.src = activeImage2;
+        image1.src = inactiveImage1;
+    });
+    document.addEventListener('DOMContentLoaded', () => {
+        activateColumn1();
     });
 </script>
 <style>

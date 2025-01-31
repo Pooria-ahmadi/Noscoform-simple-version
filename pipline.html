@@ -76,9 +76,9 @@
                 <img src="image/image 16.png" alt="">
             </div>
             <div class="is-flex is-justify-content-space-between pt-2">
-                <p class="has-text-grey-dark has-text-weight-bold  has-text-left w-138px">
+                <h1 class="has-text-grey-dark has-text-weight-bold  has-text-left w-138px">
                     Immunologie et Inflammation
-                </p>
+                </h1>
                 <p class="color-0808b5 w-56px">
                     lire
                     <img src="image/blue down.png" alt="">
@@ -101,9 +101,9 @@
                 <img src="image/image 15.png" alt="">
             </div>
             <div class="is-flex is-justify-content-space-between  py-4">
-                <p class="has-text-grey-dark has-text-weight-bold">
+                <h2 class="has-text-grey-dark has-text-weight-bold">
                     VACCINES
-                </p>
+                </h2>
                 <p class="has-text-grey">
                     lire
                     <img src="image/grey down.png" alt="">
@@ -132,9 +132,9 @@
                 <img src="image/image 17.png" alt="">
             </div>
             <div class="is-flex is-justify-content-space-between  py-4">
-                <p class="has-text-grey-dark has-text-weight-bold">
+                <h2 class="has-text-grey-dark has-text-weight-bold">
                     ONCOLOGY
-                </p>
+                </h2>
                 <p class="has-text-danger-dark">
                     lire
                     <img src="image/red down.png" alt="">
@@ -165,12 +165,18 @@
                 experts, n’hésitez pas à nous contacter dès maintenant.
             </p>
         </div>
-        <div class="columns mx-0 has-text-centered">
-            <div class="column" id="column1">
-                <img id="image1" src="image/Frame 28.png" alt="Frame 28">
+        <div class="columns is-mobile is-centered is-vcentered">
+            <div class="column is-flex is-justify-content-center is-align-items-center">
+                <div id="vaccins"
+                    class="is-flex is-relative is-justify-content-center is-align-items-center has-background-info-light has-text-grey-dark has-text-weight-semibold is-size-4 circle-notactive">
+                    VACCINS
+                </div>
             </div>
-            <div class="column" id="column2">
-                <img id="image2" src="image/Frame 29.png" alt="Frame 28">
+            <div class="column is-flex is-justify-content-center is-align-items-center">
+                <div id="medicines"
+                    class="is-flex is-relative is-justify-content-center is-align-items-center has-background-info-light has-text-grey-dark has-text-weight-semibold is-size-4 circle-notactive">
+                    MEDICINES
+                </div>
             </div>
         </div>
         <div id="content-area" class="mt-5"></div>
@@ -219,15 +225,9 @@
             });
         }
     });
-    const column1 = document.getElementById('column1');
-    const column2 = document.getElementById('column2');
-    const image1 = document.getElementById('image1');
-    const image2 = document.getElementById('image2');
+    const vaccinsButton = document.getElementById('vaccins');
+    const medicinesButton = document.getElementById('medicines');
     const contentArea = document.getElementById('content-area');
-    const activeImage1 = "image/Frame 19.png";
-    const inactiveImage1 = "image/Frame 28.png";
-    const activeImage2 = "image/Frame 21.png";
-    const inactiveImage2 = "image/Frame 29.png";
     const content1 = `
         <div class="columns mx-0 is-vcentered">
             <div class="column">
@@ -294,19 +294,20 @@
             </div>
         </div>
     `;
-    const activateColumn1 = () => {
-        contentArea.innerHTML = content1;
-        image1.src = activeImage1;
-        image2.src = inactiveImage2;
-    };
-    column1.addEventListener('click', activateColumn1);
-    column2.addEventListener('click', () => {
-        contentArea.innerHTML = content2;
-        image2.src = activeImage2;
-        image1.src = inactiveImage1;
-    });
+    function activateButton(selectedButton, otherButton, content) {
+        selectedButton.classList.remove('circle-notactive');
+        selectedButton.classList.add('circle-active');
+        selectedButton.innerHTML = `${selectedButton.textContent} <img src="image/down.png" alt="" class="bt-0">`;
+        otherButton.classList.remove('circle-active');
+        otherButton.classList.add('circle-notactive');
+        otherButton.innerHTML = otherButton.textContent.replace('<img src="image/down.png" alt="" class="bt-0">', '').trim();
+        contentArea.innerHTML = content;
+    }
+
+    vaccinsButton.addEventListener('click', () => activateButton(vaccinsButton, medicinesButton, content1));
+    medicinesButton.addEventListener('click', () => activateButton(medicinesButton, vaccinsButton, content2));
     document.addEventListener('DOMContentLoaded', () => {
-        activateColumn1();
+        activateButton(vaccinsButton, medicinesButton, content1);
     });
 </script>
 <style>
